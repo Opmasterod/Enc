@@ -10,7 +10,7 @@ ENV TERM=xterm
 
 # 2. Install Dependencies
 RUN dnf -y update && \
-    dnf -y install git aria2 bash xz wget curl pv jq python3-pip mediainfo psmisc procps-ng qbittorrent-nox && \
+    dnf -y install git bash xz wget curl pv jq python3-pip mediainfo psmisc procps-ng && \
     if [[ "$(arch)" == "aarch64" ]]; then \
         dnf -y install gcc python3-devel; \
     fi && \
